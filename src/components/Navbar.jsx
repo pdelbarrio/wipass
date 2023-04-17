@@ -40,6 +40,7 @@ function Navbar() {
           className={`w-6 h-6 ${isExpanded ? "hidden" : ""}`}
         />
       </button>
+
       <ul>
         <li className="min-w-[100px] border rounded-full flex items-center justify-between py-4 px-6 my-6">
           <div className="flex items-center">
@@ -56,6 +57,7 @@ function Navbar() {
             </div>
           </div>
         </li>
+
         <li
           className="border rounded-full my-2"
           onClick={() => toggleOption("Global View")}
@@ -63,11 +65,12 @@ function Navbar() {
           <a href="#" className="py-2 px-4 flex items-center">
             <img src={global} alt="global" />
             <p
-              className={`block py-2 px-4 ${
+              className={`py-2 px-4 ${
                 selectedOption === "Global View"
                   ? "text-[#6577E0]"
                   : "text-[#011F2B]"
               } hover:text-[#6577E0] ${isExpanded ? "" : "hidden"}`}
+              style={{ whiteSpace: "nowrap", overflow: "hidden" }}
             >
               Global view
             </p>
@@ -80,7 +83,7 @@ function Navbar() {
           <a href="#" className="py-2 px-4 flex items-center">
             <img src={analytics} />
             <p
-              className={`block py-2 px-4 ${
+              className={`py-2 px-4 ${
                 selectedOption === "Analytics"
                   ? "text-[#6577E0]"
                   : "text-[#011F2B]"
